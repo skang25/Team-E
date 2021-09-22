@@ -89,7 +89,7 @@ Jason and Hannah are a married 40 year old couple. They work full time and often
 4. When we are not meeting together we will use Discord for communication.
 
 
-## Team Working Agreement
+## Team Governance Agreement
 
 1. Everyone contributes a roughly equal amount of work.
 2. Clear communication! (Especially if you need help or need more time)
