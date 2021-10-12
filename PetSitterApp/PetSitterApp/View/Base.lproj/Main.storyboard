@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="-223.18840579710147" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--User Type View Controller-->
         <scene sceneID="7B4-LL-gFS">
             <objects>
-                <viewController id="L3N-RK-byc" sceneMemberID="viewController">
+                <viewController id="L3N-RK-byc" customClass="UserTypeViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Nl-ID-vyi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +111,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Owner"/>
                                 <connections>
+                                    <action selector="ownerSelected:" destination="L3N-RK-byc" eventType="touchUpInside" id="m2j-ya-cJU"/>
                                     <segue destination="zfI-eD-UbU" kind="presentation" identifier="ownerToName" id="XrG-jq-UKx"/>
                                 </connections>
                             </button>
@@ -120,6 +121,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Sitter"/>
                                 <connections>
+                                    <action selector="sitterSelected:" destination="L3N-RK-byc" eventType="touchUpInside" id="jZL-H4-qle"/>
                                     <segue destination="zfI-eD-UbU" kind="presentation" identifier="sitterToName" id="DK2-lk-awk"/>
                                 </connections>
                             </button>
@@ -132,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="280" y="800"/>
         </scene>
-        <!--View Controller-->
+        <!--User Name View Controller-->
         <scene sceneID="NBT-pz-vVW">
             <objects>
-                <viewController id="zfI-eD-UbU" sceneMemberID="viewController">
+                <viewController id="zfI-eD-UbU" customClass="UserNameViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TiK-fJ-cgX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +167,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
+                                    <action selector="onContinue:" destination="zfI-eD-UbU" eventType="touchUpInside" id="Ibo-kT-vzC"/>
                                     <segue destination="Ico-RT-y05" kind="presentation" identifier="nameToEmail" id="er8-bt-djQ"/>
                                 </connections>
                             </button>
@@ -186,15 +189,19 @@
                         <viewLayoutGuide key="safeArea" id="pNS-qG-XMp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="firstName" destination="MVQ-KD-0L5" id="gDS-Wi-yUu"/>
+                        <outlet property="lastName" destination="tmh-sr-iEI" id="FFj-oM-kLA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34F-kd-p2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="800"/>
         </scene>
-        <!--View Controller-->
+        <!--User Contact View Controller-->
         <scene sceneID="jB7-5r-cYH">
             <objects>
-                <viewController id="Ico-RT-y05" sceneMemberID="viewController">
+                <viewController id="Ico-RT-y05" customClass="UserContactViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Icy-mx-op4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +226,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
+                                    <action selector="onContinue:" destination="Ico-RT-y05" eventType="touchUpInside" id="oZb-DF-bUB"/>
                                     <segue destination="anp-VZ-266" kind="presentation" identifier="nameToAddress" id="ey5-Q5-5a6"/>
                                 </connections>
                             </button>
@@ -252,15 +260,19 @@
                         <viewLayoutGuide key="safeArea" id="7sj-ss-moy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="emailAddress" destination="ywp-P5-zjj" id="sXk-aR-yAz"/>
+                        <outlet property="phoneNumber" destination="YDQ-3r-qp0" id="Efo-d7-N5b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dpf-Bt-XOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1969.5652173913045" y="799.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="CfI-Ve-55f">
             <objects>
-                <viewController id="anp-VZ-266" sceneMemberID="viewController">
+                <viewController id="anp-VZ-266" customClass="UserInfoViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Kt-6r-zG0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,6 +366,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
+                                    <action selector="onContinue:" destination="anp-VZ-266" eventType="touchUpInside" id="0lz-Ls-bUz"/>
                                     <segue destination="1P3-2F-B2j" kind="presentation" identifier="addressToRegister" id="fC6-bX-oXK"/>
                                 </connections>
                             </button>
@@ -361,15 +374,23 @@
                         <viewLayoutGuide key="safeArea" id="5gg-d7-DVl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLine1" destination="GOz-MH-6hS" id="WEP-Xc-dPd"/>
+                        <outlet property="addressLine2" destination="tEE-lm-21i" id="d5I-rq-l33"/>
+                        <outlet property="birthday" destination="s3b-Du-YaZ" id="Zv5-am-0uX"/>
+                        <outlet property="city" destination="Lak-Of-OKc" id="Lls-Cj-Epb"/>
+                        <outlet property="state" destination="XCv-aF-tUv" id="Q2d-Bx-rl3"/>
+                        <outlet property="zipcode" destination="E29-nG-Tln" id="7hc-f0-LdA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftp-Y5-xOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2828.985507246377" y="799.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--User Register View Controller-->
         <scene sceneID="SuL-1d-dsS">
             <objects>
-                <viewController id="1P3-2F-B2j" sceneMemberID="viewController">
+                <viewController id="1P3-2F-B2j" customClass="UserRegisterViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ff7-41-O0Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,6 +447,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
+                                    <action selector="onContinue:" destination="1P3-2F-B2j" eventType="touchUpInside" id="WeO-2q-5Ze"/>
                                     <segue destination="Nk0-Of-mOF" kind="presentation" identifier="registerToPhoto" id="Trn-vP-KJr"/>
                                 </connections>
                             </button>
@@ -433,15 +455,20 @@
                         <viewLayoutGuide key="safeArea" id="bhj-gg-9fz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="6Nk-fV-odK" id="tgh-QD-Rfo"/>
+                        <outlet property="passwordRetype" destination="J6Q-gW-Gmy" id="YQM-W3-iu9"/>
+                        <outlet property="username" destination="aWh-DA-d3F" id="9qp-2y-lH5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Me0-oI-D1I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3763.7681159420295" y="799.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--User Photo View Controller-->
         <scene sceneID="an5-XE-1x3">
             <objects>
-                <viewController id="Nk0-Of-mOF" sceneMemberID="viewController">
+                <viewController id="Nk0-Of-mOF" customClass="UserPhotoViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w7z-Jg-8IL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,17 +488,26 @@
                                 <rect key="frame" x="160" y="436" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Upload Photo"/>
+                                <connections>
+                                    <action selector="onUploadPhoto:" destination="Nk0-Of-mOF" eventType="touchUpInside" id="sdn-VH-5Es"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWp-Zv-c3X">
                                 <rect key="frame" x="169" y="693" width="77" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="onFinish:" destination="Nk0-Of-mOF" eventType="touchUpInside" id="l2z-Y1-sd2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJg-OU-sDx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="profilePic" destination="aeS-uw-nOI" id="bPA-G3-5wf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAZ-Kb-cZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

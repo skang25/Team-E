@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5E277DFD2715E3F700AADE61 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277DFC2715E3F700AADE61 /* LoginViewController.swift */; };
+		5E277E062715EAC500AADE61 /* UserTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E052715EAC500AADE61 /* UserTypeViewController.swift */; };
+		5E277E0A2715EAD900AADE61 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E092715EAD900AADE61 /* UserNameViewController.swift */; };
+		5E277E0D2715EAFA00AADE61 /* UserContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E0C2715EAFA00AADE61 /* UserContactViewController.swift */; };
+		5E277E102715EB0600AADE61 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E0F2715EB0600AADE61 /* UserInfoViewController.swift */; };
+		5E277E132715EB1100AADE61 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E122715EB1100AADE61 /* UserRegisterViewController.swift */; };
+		5E277E162715EB1A00AADE61 /* UserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E152715EB1A00AADE61 /* UserPhotoViewController.swift */; };
 		5E40A3C62703E8A0001B94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40A3C52703E8A0001B94AC /* AppDelegate.swift */; };
 		5E40A3C82703E8A0001B94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40A3C72703E8A0001B94AC /* SceneDelegate.swift */; };
 		5E40A3CD2703E8A0001B94AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E40A3CB2703E8A0001B94AC /* Main.storyboard */; };
@@ -17,6 +23,12 @@
 
 /* Begin PBXFileReference section */
 		5E277DFC2715E3F700AADE61 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5E277E052715EAC500AADE61 /* UserTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypeViewController.swift; sourceTree = "<group>"; };
+		5E277E092715EAD900AADE61 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
+		5E277E0C2715EAFA00AADE61 /* UserContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContactViewController.swift; sourceTree = "<group>"; };
+		5E277E0F2715EB0600AADE61 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		5E277E122715EB1100AADE61 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
+		5E277E152715EB1A00AADE61 /* UserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoViewController.swift; sourceTree = "<group>"; };
 		5E40A3C22703E8A0001B94AC /* PetSitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetSitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E40A3C52703E8A0001B94AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E40A3C72703E8A0001B94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +68,23 @@
 		5E277E022715E51700AADE61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5E277E042715EAA000AADE61 /* Sign Up Controllers */,
 				5E277DFC2715E3F700AADE61 /* LoginViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E277E042715EAA000AADE61 /* Sign Up Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E277E052715EAC500AADE61 /* UserTypeViewController.swift */,
+				5E277E092715EAD900AADE61 /* UserNameViewController.swift */,
+				5E277E0C2715EAFA00AADE61 /* UserContactViewController.swift */,
+				5E277E0F2715EB0600AADE61 /* UserInfoViewController.swift */,
+				5E277E122715EB1100AADE61 /* UserRegisterViewController.swift */,
+				5E277E152715EB1A00AADE61 /* UserPhotoViewController.swift */,
+			);
+			path = "Sign Up Controllers";
 			sourceTree = "<group>";
 		};
 		5E40A3B92703E8A0001B94AC = {
@@ -162,8 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E277DFD2715E3F700AADE61 /* LoginViewController.swift in Sources */,
+				5E277E102715EB0600AADE61 /* UserInfoViewController.swift in Sources */,
 				5E40A3C62703E8A0001B94AC /* AppDelegate.swift in Sources */,
 				5E40A3C82703E8A0001B94AC /* SceneDelegate.swift in Sources */,
+				5E277E132715EB1100AADE61 /* UserRegisterViewController.swift in Sources */,
+				5E277E062715EAC500AADE61 /* UserTypeViewController.swift in Sources */,
+				5E277E0D2715EAFA00AADE61 /* UserContactViewController.swift in Sources */,
+				5E277E162715EB1A00AADE61 /* UserPhotoViewController.swift in Sources */,
+				5E277E0A2715EAD900AADE61 /* UserNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
