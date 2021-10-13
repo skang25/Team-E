@@ -13,6 +13,14 @@ class UserRegisterViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var passwordRetype: UITextField!
     
+    var userType: String?
+    var firstName: String?
+    var lastName: String?
+    var email: String?
+    var phone: String?
+    var userAddress: String?
+    var userDOB: String?
+    
     
     
     override func viewDidLoad() {
@@ -21,11 +29,19 @@ class UserRegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onContinue(_ sender: Any) {
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing")
+        
+        let destinationVC = segue.destination as! UserPhotoViewController
+        
+        destinationVC.userType = self.userType
+        destinationVC.firstName = self.firstName
+        destinationVC.lastName = self.lastName
+        destinationVC.email = self.email
+        destinationVC.phone = self.phone
+        destinationVC.userAddress = self.userAddress
+        destinationVC.userDOB = self.userDOB
+        destinationVC.username = username.text
+        destinationVC.password = password.text
     }
     
     /*

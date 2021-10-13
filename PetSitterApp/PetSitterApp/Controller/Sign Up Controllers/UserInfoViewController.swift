@@ -15,6 +15,11 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var state: UITextField!
     @IBOutlet weak var zipcode: UITextField!
     @IBOutlet weak var birthday: UIDatePicker!
+    var userType: String?
+    var firstName: String?
+    var lastName: String?
+    var email: String?
+    var phone: String?
     
     
     override func viewDidLoad() {
@@ -22,13 +27,24 @@ class UserInfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    @IBAction func onContinue(_ sender: Any) {
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing")
+        
+        let userAddress = "\(addressLine1), \(addressLine2), \(city), \(state) \(zipcode)" ?? "None"
+        let destinationVC = segue.destination as! UserRegisterViewController
+        
+        destinationVC.userType = self.userType
+        destinationVC.firstName = self.firstName
+        destinationVC.lastName = self.lastName
+        destinationVC.email = self.email
+        destinationVC.phone = self.phone
+        destinationVC.userAddress = userAddress
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let birthdayString = dateFormatter.string(from: birthday.date)
+        destinationVC.userDOB = birthdayString
     }
     
 

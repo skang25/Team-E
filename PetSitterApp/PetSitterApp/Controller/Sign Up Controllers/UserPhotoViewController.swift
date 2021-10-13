@@ -10,6 +10,15 @@ import UIKit
 class UserPhotoViewController: UIViewController {
 
     @IBOutlet weak var profilePic: UIImageView!
+    var userType: String?
+    var firstName: String?
+    var lastName: String?
+    var email: String?
+    var phone: String?
+    var userAddress: String?
+    var userDOB: String?
+    var username: String?
+    var password: String?
     
     
     override func viewDidLoad() {

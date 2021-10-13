@@ -11,20 +11,30 @@ class UserContactViewController: UIViewController {
 
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var niceToMeetLabel: UILabel!
+    var userType: String?
+    var firstName: String?
+    var lastName: String?
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        niceToMeetLabel.text = "Nice to meet you, \(firstName!)!"
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onContinue(_ sender: Any) {
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing")
+        
+        let destinationVC = segue.destination as! UserInfoViewController
+        
+        destinationVC.userType = self.userType
+        destinationVC.firstName = self.firstName
+        destinationVC.lastName = self.lastName
+        destinationVC.email = emailAddress.text
+        destinationVC.phone = phoneNumber.text
+        
     }
     
     /*

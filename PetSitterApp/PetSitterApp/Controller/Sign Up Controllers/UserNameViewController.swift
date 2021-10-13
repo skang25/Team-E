@@ -11,6 +11,7 @@ class UserNameViewController: UIViewController {
 
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
+    var userType: String?
     
     
     override func viewDidLoad() {
@@ -19,11 +20,13 @@ class UserNameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onContinue(_ sender: Any) {
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing")
+        
+        let destinationVC = segue.destination as! UserContactViewController
+        
+        destinationVC.userType = self.userType
+        destinationVC.firstName = firstName.text ?? "friend"
+        destinationVC.lastName = lastName.text
     }
     
     /*

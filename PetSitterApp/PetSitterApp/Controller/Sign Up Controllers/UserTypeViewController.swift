@@ -15,10 +15,19 @@ class UserTypeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func ownerSelected(_ sender: Any) {
-    }
-    
-    @IBAction func sitterSelected(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! UserNameViewController
+        
+        if segue.identifier == "ownerToName" {
+            destinationVC.userType = "owner"
+            print("here")
+        }
+        
+        if segue.identifier == "sitterToName" {
+            destinationVC.userType = "sitter"
+        }
+        
     }
 
 

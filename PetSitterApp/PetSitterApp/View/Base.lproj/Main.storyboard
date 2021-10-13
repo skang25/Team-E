@@ -111,8 +111,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Owner"/>
                                 <connections>
-                                    <action selector="ownerSelected:" destination="L3N-RK-byc" eventType="touchUpInside" id="m2j-ya-cJU"/>
-                                    <segue destination="zfI-eD-UbU" kind="presentation" identifier="ownerToName" id="XrG-jq-UKx"/>
+                                    <segue destination="zfI-eD-UbU" kind="presentation" identifier="ownerToName" id="c6u-xS-hH0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcN-D2-K6j">
@@ -121,8 +120,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Sitter"/>
                                 <connections>
-                                    <action selector="sitterSelected:" destination="L3N-RK-byc" eventType="touchUpInside" id="jZL-H4-qle"/>
-                                    <segue destination="zfI-eD-UbU" kind="presentation" identifier="sitterToName" id="DK2-lk-awk"/>
+                                    <segue destination="zfI-eD-UbU" kind="presentation" identifier="sitterToName" id="nJc-yy-dNS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,7 +165,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <action selector="onContinue:" destination="zfI-eD-UbU" eventType="touchUpInside" id="Ibo-kT-vzC"/>
                                     <segue destination="Ico-RT-y05" kind="presentation" identifier="nameToEmail" id="er8-bt-djQ"/>
                                 </connections>
                             </button>
@@ -226,7 +223,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <action selector="onContinue:" destination="Ico-RT-y05" eventType="touchUpInside" id="oZb-DF-bUB"/>
                                     <segue destination="anp-VZ-266" kind="presentation" identifier="nameToAddress" id="ey5-Q5-5a6"/>
                                 </connections>
                             </button>
@@ -262,6 +258,7 @@
                     </view>
                     <connections>
                         <outlet property="emailAddress" destination="ywp-P5-zjj" id="sXk-aR-yAz"/>
+                        <outlet property="niceToMeetLabel" destination="mmw-ZW-rxE" id="4vy-CW-MgO"/>
                         <outlet property="phoneNumber" destination="YDQ-3r-qp0" id="Efo-d7-N5b"/>
                     </connections>
                 </viewController>
@@ -366,7 +363,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <action selector="onContinue:" destination="anp-VZ-266" eventType="touchUpInside" id="0lz-Ls-bUz"/>
                                     <segue destination="1P3-2F-B2j" kind="presentation" identifier="addressToRegister" id="fC6-bX-oXK"/>
                                 </connections>
                             </button>
@@ -447,7 +443,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <action selector="onContinue:" destination="1P3-2F-B2j" eventType="touchUpInside" id="WeO-2q-5Ze"/>
                                     <segue destination="Nk0-Of-mOF" kind="presentation" identifier="registerToPhoto" id="Trn-vP-KJr"/>
                                 </connections>
                             </button>
@@ -497,9 +492,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Finish"/>
-                                <connections>
-                                    <action selector="onFinish:" destination="Nk0-Of-mOF" eventType="touchUpInside" id="l2z-Y1-sd2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJg-OU-sDx"/>
@@ -515,7 +507,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DK2-lk-awk"/>
+        <segue reference="nJc-yy-dNS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
