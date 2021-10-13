@@ -24,13 +24,18 @@ class UserPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        profilePic.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        profilePic.layer.borderWidth = 2.0
+        profilePic.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        profilePic.layer.cornerRadius = profilePic.frame.size.width / 2
     }
     
     @IBAction func onUploadPhoto(_ sender: Any) {
+        //TO-DO: Import AlamofireImage
     }
     
     @IBAction func onFinish(_ sender: Any) {
+        //Send info to database
     }
     
     /*
