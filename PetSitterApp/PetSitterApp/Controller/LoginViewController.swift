@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logoImage.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        logoImage.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         logoImage.layer.borderWidth = 2.0
         logoImage.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         logoImage.layer.cornerRadius = logoImage.frame.size.width / 2
@@ -26,14 +26,9 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onLogin(_ sender: Any) {
+        self.performSegue(withIdentifier: "login", sender: nil)
     }
-    */
+    
 
 }
