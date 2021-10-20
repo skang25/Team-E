@@ -24,9 +24,12 @@
 		5E66193F271669C4006191D2 /* UserHomeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66193E271669C4006191D2 /* UserHomeScreenTableViewCell.swift */; };
 		5EAFFED0271F6BC8005A02CA /* ViewUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFFECF271F6BC8005A02CA /* ViewUserInfoViewController.swift */; };
 		5EAFFED3271F6E96005A02CA /* PetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFFED2271F6E96005A02CA /* PetCollectionViewCell.swift */; };
+		7594AFCAAB4CB4E746663F5B /* Pods_PetSitterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108D78A76DD32F1B38B62B91 /* Pods_PetSitterApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01E12B56D454C69177FDB205 /* Pods-PetSitterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetSitterApp.release.xcconfig"; path = "Target Support Files/Pods-PetSitterApp/Pods-PetSitterApp.release.xcconfig"; sourceTree = "<group>"; };
+		108D78A76DD32F1B38B62B91 /* Pods_PetSitterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetSitterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E277DFC2715E3F700AADE61 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5E277E052715EAC500AADE61 /* UserTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypeViewController.swift; sourceTree = "<group>"; };
 		5E277E092715EAD900AADE61 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		5E66193E271669C4006191D2 /* UserHomeScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeScreenTableViewCell.swift; sourceTree = "<group>"; };
 		5EAFFECF271F6BC8005A02CA /* ViewUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUserInfoViewController.swift; sourceTree = "<group>"; };
 		5EAFFED2271F6E96005A02CA /* PetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCollectionViewCell.swift; sourceTree = "<group>"; };
+		64C81C57E7A70257E8D1C2AD /* Pods-PetSitterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetSitterApp.debug.xcconfig"; path = "Target Support Files/Pods-PetSitterApp/Pods-PetSitterApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7594AFCAAB4CB4E746663F5B /* Pods_PetSitterApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,8 @@
 			children = (
 				5E40A3C42703E8A0001B94AC /* PetSitterApp */,
 				5E40A3C32703E8A0001B94AC /* Products */,
+				E204373005E61A7DC759E83D /* Pods */,
+				EBBD277BB36312507F5782B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,24 @@
 			path = PetSitterApp;
 			sourceTree = "<group>";
 		};
+		E204373005E61A7DC759E83D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64C81C57E7A70257E8D1C2AD /* Pods-PetSitterApp.debug.xcconfig */,
+				01E12B56D454C69177FDB205 /* Pods-PetSitterApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EBBD277BB36312507F5782B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				108D78A76DD32F1B38B62B91 /* Pods_PetSitterApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E40A3D62703E8A0001B94AC /* Build configuration list for PBXNativeTarget "PetSitterApp" */;
 			buildPhases = (
+				CBEEF531B946E9F088DC7EBB /* [CP] Check Pods Manifest.lock */,
 				5E40A3BE2703E8A0001B94AC /* Sources */,
 				5E40A3BF2703E8A0001B94AC /* Frameworks */,
 				5E40A3C02703E8A0001B94AC /* Resources */,
+				52E15DDADE595EE5EA4043B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52E15DDADE595EE5EA4043B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetSitterApp/Pods-PetSitterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetSitterApp/Pods-PetSitterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetSitterApp/Pods-PetSitterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBEEF531B946E9F088DC7EBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetSitterApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E40A3BE2703E8A0001B94AC /* Sources */ = {
@@ -359,6 +428,7 @@
 		};
 		5E40A3D72703E8A0001B94AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C81C57E7A70257E8D1C2AD /* Pods-PetSitterApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +448,7 @@
 		};
 		5E40A3D82703E8A0001B94AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01E12B56D454C69177FDB205 /* Pods-PetSitterApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

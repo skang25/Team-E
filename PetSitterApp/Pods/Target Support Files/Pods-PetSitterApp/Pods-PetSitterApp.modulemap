@@ -1,0 +1,6 @@
+framework module Pods_PetSitterApp {
+  umbrella header "Pods-PetSitterApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
