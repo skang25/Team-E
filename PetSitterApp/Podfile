@@ -7,4 +7,5 @@ target 'PetSitterApp' do
 
   # Pods for PetSitterApp
   pod 'Parse'
+  pod 'AlamofireImage'
 end
