@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Parse
+import Alamofire
 
 class LoginViewController: UIViewController {
     
@@ -13,7 +15,29 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
-
+    func alert(message: NSString, title: NSString) {
+        let alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertController.StyleUIAlertController.StyleUIAlertController.StyleUIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.StyleUIAlertAction.StyleUIAlertAction.Style.default, handler: nil)); self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func login(_ sender: Any) {
+        let username = username.text
+        let password = password.text
+        
+        PFuser.logInWithUsername(inBackground: username!, password: password!, block: {(user, error) -> Void in
+            if let error = error as NSError? {
+                let errorString = error.userInfo["error"] as? NSString
+                self.alert(message: errorString!, title: "Error")
+            }
+            else {
+                self.alert(message: "Welcome back!", title: "Login")
+            }
+        })
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,12 +47,6 @@ class LoginViewController: UIViewController {
         logoImage.layer.cornerRadius = logoImage.frame.size.width / 2
 
         // Do any additional setup after loading the view.
-    }
     
-
-    @IBAction func onLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "login", sender: nil)
-    }
-    
-
+}
 }
