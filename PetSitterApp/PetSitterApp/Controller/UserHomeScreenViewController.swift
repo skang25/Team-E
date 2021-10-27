@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class UserHomeScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -48,7 +49,14 @@ class UserHomeScreenViewController: UIViewController, UITableViewDelegate, UITab
     
     
     @IBAction func onLogout(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        PFUser.logOut()
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = main.instantiateViewController(withIdentifier: "LoginViewController")
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+        delegate.window?.rootViewController = loginVC
+
     }
     
 }

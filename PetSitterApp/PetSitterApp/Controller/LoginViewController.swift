@@ -10,8 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
 
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func onLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "login", sender: nil)
+        
     }
     
 

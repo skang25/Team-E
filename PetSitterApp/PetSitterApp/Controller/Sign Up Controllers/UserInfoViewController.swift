@@ -31,7 +31,15 @@ class UserInfoViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let userAddress = "\(addressLine1), \(addressLine2), \(city), \(state) \(zipcode)" ?? "None"
+        var userAddress: String?
+        
+        if (addressLine2.text != ""){
+            userAddress = "\(addressLine1.text!), \(addressLine2.text!), \(city.text!), \(state.text!) \(zipcode.text!)"
+        } else {
+            userAddress = "\(addressLine1.text!), \(city.text!), \(state.text!) \(zipcode.text!)"
+        }
+        
+        
         let destinationVC = segue.destination as! UserRegisterViewController
         
         destinationVC.userType = self.userType
