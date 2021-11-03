@@ -132,33 +132,41 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$15/hr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLc-xd-AB1">
-                                                    <rect key="frame" x="345" y="40" width="49" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5star" translatesAutoresizingMaskIntoConstraints="NO" id="Jra-0o-ked">
+                                                    <rect key="frame" x="108" y="56" width="105" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="Rji-hu-5DZ"/>
+                                                        <constraint firstAttribute="width" constant="105" id="y16-WP-03K"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15/hr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLc-xd-AB1">
+                                                    <rect key="frame" x="320" y="39.5" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5star" translatesAutoresizingMaskIntoConstraints="NO" id="Jra-0o-ked">
-                                                    <rect key="frame" x="108" y="56" width="105" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="deS-fq-UOx" firstAttribute="trailing" secondItem="kht-Va-6ut" secondAttribute="trailingMargin" id="8rt-iN-DDp"/>
                                                 <constraint firstItem="TIi-gg-jeS" firstAttribute="leading" secondItem="kht-Va-6ut" secondAttribute="leadingMargin" id="B2l-9d-Sln"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qLc-xd-AB1" secondAttribute="trailing" constant="25" id="Nuf-xQ-rbe"/>
                                                 <constraint firstItem="TIi-gg-jeS" firstAttribute="top" secondItem="kht-Va-6ut" secondAttribute="topMargin" id="PUy-wa-J2n"/>
+                                                <constraint firstItem="Jra-0o-ked" firstAttribute="leading" secondItem="TIi-gg-jeS" secondAttribute="trailing" constant="8" symbolic="YES" id="SZK-JT-9b4"/>
                                                 <constraint firstItem="deS-fq-UOx" firstAttribute="top" secondItem="kht-Va-6ut" secondAttribute="topMargin" id="VJW-qN-PSs"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="IC8-Bt-fMZ" secondAttribute="trailing" id="c8F-0B-8OS"/>
                                                 <constraint firstItem="IC8-Bt-fMZ" firstAttribute="leading" secondItem="TIi-gg-jeS" secondAttribute="trailing" constant="8" symbolic="YES" id="chG-7v-m24"/>
                                                 <constraint firstItem="IC8-Bt-fMZ" firstAttribute="top" secondItem="kht-Va-6ut" secondAttribute="topMargin" constant="22" id="hmi-br-TId"/>
+                                                <constraint firstItem="qLc-xd-AB1" firstAttribute="centerY" secondItem="kht-Va-6ut" secondAttribute="centerY" id="nC5-zU-6Qv"/>
                                                 <constraint firstItem="deS-fq-UOx" firstAttribute="leading" secondItem="TIi-gg-jeS" secondAttribute="trailing" constant="8" symbolic="YES" id="qfH-WM-jc9"/>
+                                                <constraint firstItem="Jra-0o-ked" firstAttribute="top" secondItem="IC8-Bt-fMZ" secondAttribute="bottom" constant="8" symbolic="YES" id="xxc-bC-0Yt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="animalTypes" destination="IC8-Bt-fMZ" id="tgr-EE-yi6"/>
                                             <outlet property="sitterName" destination="deS-fq-UOx" id="f4E-Eh-zVo"/>
                                             <outlet property="sitterProfilePic" destination="TIi-gg-jeS" id="uqa-vW-sZG"/>
+                                            <outlet property="sitterRate" destination="qLc-xd-AB1" id="j7G-zm-6AT"/>
+                                            <outlet property="starRating" destination="Jra-0o-ked" id="M7x-3X-smJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -643,13 +651,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGU-pO-mA5">
-                                <rect key="frame" x="147" y="92" width="120" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DGU-pO-mA5">
+                                <rect key="frame" x="147" y="92" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="EFB-Fg-TlS"/>
+                                    <constraint firstAttribute="height" constant="120" id="Kur-j4-KJE"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sitter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye2-cD-5fH">
-                                <rect key="frame" x="162" y="235" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitter Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye2-cD-5fH">
+                                <rect key="frame" x="162" y="224" width="90" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -702,6 +712,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Book"/>
+                                <connections>
+                                    <action selector="onBook:" destination="JTp-Fi-JnA" eventType="touchUpInside" id="Tgs-Nt-CbN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dogs, Cats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9g-u7-CFs">
                                 <rect key="frame" x="114" y="311" width="84" height="21"/>
@@ -717,9 +730,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5star" translatesAutoresizingMaskIntoConstraints="NO" id="S9W-ZR-Cz5">
+                                <rect key="frame" x="157" y="249.5" width="100" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="NSH-3S-s5U"/>
+                                    <constraint firstAttribute="width" constant="100" id="sOM-CG-RdR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rTu-nf-eb8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S9W-ZR-Cz5" firstAttribute="top" secondItem="ye2-cD-5fH" secondAttribute="bottom" constant="5" id="5qZ-87-WoB"/>
+                            <constraint firstItem="DGU-pO-mA5" firstAttribute="top" secondItem="rTu-nf-eb8" secondAttribute="top" constant="36" id="Vrb-Vf-PXJ"/>
+                            <constraint firstItem="ye2-cD-5fH" firstAttribute="top" secondItem="DGU-pO-mA5" secondAttribute="bottom" constant="12" id="ZIB-5A-Hn4"/>
+                            <constraint firstItem="DGU-pO-mA5" firstAttribute="centerX" secondItem="iTP-OC-U7Q" secondAttribute="centerX" id="l8s-5j-45T"/>
+                            <constraint firstItem="S9W-ZR-Cz5" firstAttribute="centerX" secondItem="iTP-OC-U7Q" secondAttribute="centerX" id="mgZ-R1-UoQ"/>
+                            <constraint firstItem="ye2-cD-5fH" firstAttribute="centerX" secondItem="iTP-OC-U7Q" secondAttribute="centerX" id="wzc-Vj-mmu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sitter Details" id="sap-71-w72">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Kkw-8U-VNU">
@@ -729,7 +757,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="animalTypes" destination="I9g-u7-CFs" id="Eh7-GP-qGQ"/>
+                        <outlet property="rate" destination="PJl-V4-zTS" id="AhB-38-jIg"/>
+                        <outlet property="sitterName" destination="ye2-cD-5fH" id="gJn-S6-rVJ"/>
                         <outlet property="sitterPhoto" destination="DGU-pO-mA5" id="e8z-9F-c3Q"/>
+                        <outlet property="starImage" destination="S9W-ZR-Cz5" id="DBY-Ec-Fg9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EcM-x5-tqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

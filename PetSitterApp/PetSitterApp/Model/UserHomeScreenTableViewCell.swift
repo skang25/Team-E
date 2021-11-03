@@ -12,6 +12,8 @@ class UserHomeScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var sitterProfilePic: UIImageView!
     @IBOutlet weak var sitterName: UILabel!
     @IBOutlet weak var animalTypes: UILabel!
+    @IBOutlet weak var sitterRate: UILabel!
+    @IBOutlet weak var starRating: UIImageView!
     
     
     override func awakeFromNib() {
