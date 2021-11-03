@@ -21,15 +21,19 @@
 ## Week 9 ##
 
 ## Week 10 ##
-- Feedback
-	- Feedback will be in FacultyFeedback.md each week
-	- Built screens from wireframe
-	- Working on database 
-	- Demo are good to have weekly to make progress and keep updates small
-	- Consider tagging stories scenario#1 and scenario#2 so you know what you need to do for alignment with the end of the course
-    What have you done to address demo feedback?
+- Feedback will be in FacultyFeedback.md each week
+- Built screens from wireframe
+- Working on database 
+- Demo are good to have weekly to make progress and keep updates small
+- Consider tagging stories scenario#1 and scenario#2 so you know what you need to do for alignment with the end of the course
+- What have you done to address demo feedback?
 
 ## Week 11 ##
+- Moving the dry to 11/16 to allow more time to incorporate feedback
+- The dry run and final presentation template are in content under the name - 
+- Final Presentation Template.pptx
+- Please submit the submission for the mid-term ipro update
+- Review stories to ensure you have what you need to complete scenarios one and two
 
 ## Week 12 ##
 
