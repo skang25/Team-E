@@ -11,28 +11,68 @@ import Parse
 class UserHomeScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var petSitters = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.loadSitters()
 
         // Do any additional setup after loading the view.
     }
     
+    @objc override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadSitters()
+    }
+    
+    @objc func loadSitters() {
+        let query = PFUser.query()
+        query?.includeKeys(["firstName", "lastName", "profileImage", "rate", "goodWith", "starRating"])
+        //query.whereKey("userType", equalTo: "sitter")
+        //query.limit = 20
+        print("here")
+        //self.petSitters = query?.findObjects()
+        query?.findObjectsInBackground { (users, error) in
+            if users != nil {
+                print("users = \(users)")
+                self.petSitters = users!
+                self.tableView.reloadData()
+            }
+            else {
+                print("Error: \(error?.localizedDescription)")
+            }
+        }
+    }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return self.petSitters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        print(self.petSitters)
+        print(indexPath.row)
+        let sitter = self.petSitters[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "sitterCell", for: indexPath) as! UserHomeScreenTableViewCell
         
+        let imageFile = sitter["profileImage"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        cell.sitterProfilePic.af_setImage(withURL: url)
         cell.sitterProfilePic.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cell.sitterProfilePic.layer.borderWidth = 1.0
         cell.sitterProfilePic.layer.cornerRadius = cell.sitterProfilePic.frame.size.width / 2
+        
+        cell.sitterName.text = "\(sitter["firstName"]) \(sitter["lastName"])"
+        
+        //cell.animalTypes =
+        
         
         return cell
         

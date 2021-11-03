@@ -27,30 +27,30 @@ class LoginViewController: UIViewController {
     }
     
     func alert(message: NSString, title: NSString) {
-        let alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertController.StyleUIAlertController.StyleUIAlertController.StyleUIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.StyleUIAlertAction.StyleUIAlertAction.Style.default, handler: nil)); self.present(alert, animated: true, completion: nil)
+        let alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertController.Style.alert)
+ 
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)); self.present(alert, animated: true, completion: nil)
         
     }
     
-    @IBAction func login(_ sender: Any) {
-        let username = username.text
-        let password = password.text
+
+    @IBAction func onLogin(_ sender: Any) {
         
-        PFuser.logInWithUsername(inBackground: username!, password: password!, block: {(user, error) -> Void in
+        let username = self.usernameField.text
+        let password = self.passwordField.text
+        
+        PFUser.logInWithUsername(inBackground: username!, password: password!, block: {(user, error) -> Void in
             if let error = error as NSError? {
                 let errorString = error.userInfo["error"] as? NSString
                 self.alert(message: errorString!, title: "Error")
             }
             else {
-                self.alert(message: "Welcome back!", title: "Login")
+                self.performSegue(withIdentifier: "login", sender: nil)
+                //self.alert(message: "Welcome back!", title: "Login")
             }
         })
-    }
-    
-    
-
-
-    @IBAction func onLogin(_ sender: Any) {
         
     }
+    
+    
 }
