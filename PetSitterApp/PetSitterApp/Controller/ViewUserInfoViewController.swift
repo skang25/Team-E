@@ -6,15 +6,19 @@
 //
 
 import UIKit
+import Parse
+import CryptoKit
 
 class ViewUserInfoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
 
     @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet weak var petCollectionView: UICollectionView!
+    @IBOutlet var Firstname: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         petCollectionView.delegate = self
         petCollectionView.dataSource = self
@@ -25,8 +29,32 @@ class ViewUserInfoViewController: UIViewController, UICollectionViewDelegate, UI
         userPhoto.layer.cornerRadius = userPhoto.frame.size.width / 2
         
         petCollectionView.reloadData()
-
+        
         // Do any additional setup after loading the view.
+        /*
+        let query = PFQuery(className: "_User")
+        query.getObjectInBackground(withId: "Pwbe4GaXds") { (object, error) -> Void in
+            if object != nil && error == nil {
+                //Successfully retrieved
+                    print(object!["lastname"] as! String)
+            }
+            else{
+                // Some error happened
+            }
+        }*/
+        
+        let query = PFQuery(className: "_User")
+        query.findObjectsInBackground { [self] (objects, error) -> Void in
+            if error == nil {
+                if let returnedobjects = objects {
+                    for object in returnedobjects {
+                        if((object["firstName"] as! String) == "Sam"){
+                            Firstname.text = "Sam"
+                        }
+                    }
+                }
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
