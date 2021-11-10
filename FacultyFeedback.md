@@ -36,6 +36,11 @@
 - Review stories to ensure you have what you need to complete scenarios one and two
 
 ## Week 12 ##
+- Changing scenarios to be pet owner/pet sitter makes
+- Working on the bookings for owners (and then viewable for pet sitters)
+- Backlog light on stories make sure you update and add for stories related for 30th
+- You can recrate stories for your "next release" in backlog stories - you need to talk about them in the final presentation anyway
+- Focus is on fixing bugs in demo - no new capabilities
 
 ## Week 13 ##
 
