@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		5E277E102715EB0600AADE61 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E0F2715EB0600AADE61 /* UserInfoViewController.swift */; };
 		5E277E132715EB1100AADE61 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E122715EB1100AADE61 /* UserRegisterViewController.swift */; };
 		5E277E162715EB1A00AADE61 /* UserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E277E152715EB1A00AADE61 /* UserPhotoViewController.swift */; };
+		5E2E69E6273C3DBA0060D395 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E69E5273C3DBA0060D395 /* MyBookingsViewController.swift */; };
+		5E2E69E9273C3DD40060D395 /* BookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E69E8273C3DD40060D395 /* BookingCell.swift */; };
 		5E38AE12271E57AC00F48879 /* SitterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38AE11271E57AC00F48879 /* SitterDetailsViewController.swift */; };
 		5E40A3C62703E8A0001B94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40A3C52703E8A0001B94AC /* AppDelegate.swift */; };
 		5E40A3C82703E8A0001B94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40A3C72703E8A0001B94AC /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 		5E277E0F2715EB0600AADE61 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		5E277E122715EB1100AADE61 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		5E277E152715EB1A00AADE61 /* UserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoViewController.swift; sourceTree = "<group>"; };
+		5E2E69E5273C3DBA0060D395 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		5E2E69E8273C3DD40060D395 /* BookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCell.swift; sourceTree = "<group>"; };
 		5E38AE11271E57AC00F48879 /* SitterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterDetailsViewController.swift; sourceTree = "<group>"; };
 		5E40A3C22703E8A0001B94AC /* PetSitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetSitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E40A3C52703E8A0001B94AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			children = (
 				5E66193E271669C4006191D2 /* UserHomeScreenTableViewCell.swift */,
 				5EAFFED2271F6E96005A02CA /* PetCollectionViewCell.swift */,
+				5E2E69E8273C3DD40060D395 /* BookingCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 				5E66193B271665ED006191D2 /* UserHomeScreenViewController.swift */,
 				5E38AE11271E57AC00F48879 /* SitterDetailsViewController.swift */,
 				5EAFFECF271F6BC8005A02CA /* ViewUserInfoViewController.swift */,
+				5E2E69E5273C3DBA0060D395 /* MyBookingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,7 +151,6 @@
 				64C81C57E7A70257E8D1C2AD /* Pods-PetSitterApp.debug.xcconfig */,
 				01E12B56D454C69177FDB205 /* Pods-PetSitterApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -276,6 +281,7 @@
 				5E40A3C62703E8A0001B94AC /* AppDelegate.swift in Sources */,
 				5E40A3C82703E8A0001B94AC /* SceneDelegate.swift in Sources */,
 				5E277E132715EB1100AADE61 /* UserRegisterViewController.swift in Sources */,
+				5E2E69E9273C3DD40060D395 /* BookingCell.swift in Sources */,
 				5EAFFED0271F6BC8005A02CA /* ViewUserInfoViewController.swift in Sources */,
 				5E277E062715EAC500AADE61 /* UserTypeViewController.swift in Sources */,
 				5E66193F271669C4006191D2 /* UserHomeScreenTableViewCell.swift in Sources */,
@@ -285,6 +291,7 @@
 				5E66193C271665ED006191D2 /* UserHomeScreenViewController.swift in Sources */,
 				5EAFFED3271F6E96005A02CA /* PetCollectionViewCell.swift in Sources */,
 				5E277E0A2715EAD900AADE61 /* UserNameViewController.swift in Sources */,
+				5E2E69E6273C3DBA0060D395 /* MyBookingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6VPT56SGS7;
 				INFOPLIST_FILE = PetSitterApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6VPT56SGS7;
 				INFOPLIST_FILE = PetSitterApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class SitterDetailsViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class SitterDetailsViewController: UIViewController {
     var animals = ""
     var rateString = ""
     var starRating = 5
+    var sitter = PFObject(className: "User")
     
     
     override func viewDidLoad() {
@@ -44,7 +46,32 @@ class SitterDetailsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func alert(message: NSString, title: NSString) {
+        let alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertController.Style.alert)
+ 
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func onBook(_ sender: Any) {
-        print("Confirmed")
+        
+        var appointment = PFObject(className:"Appointment")
+        
+        appointment["owner"] = PFUser.current()
+        appointment["sitter"] = self.sitter
+        appointment["start"] = NSDate()
+        appointment["end"] = NSDate()
+        
+        appointment.saveInBackground {
+          (success: Bool, error: Error?) in
+          if (success) {
+            self.alert(message: "Your booking has been confirmed." as NSString, title: "Success")
+            self.dismiss(animated: true, completion: nil)
+          } else {
+            self.alert(message: "An error occurred while confirming your booking. Please try again later." as NSString, title: "Oops!")
+            print("Error: \(error?.localizedDescription)")
+          }
+        }
     }
 }
