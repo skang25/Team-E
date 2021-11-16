@@ -21,6 +21,7 @@ class UserPhotoViewController: UIViewController, UIImagePickerControllerDelegate
     var userDOB: String?
     var username: String?
     var password: String?
+    var imageUploaded = false
     
     
     override func viewDidLoad() {
@@ -56,6 +57,8 @@ class UserPhotoViewController: UIViewController, UIImagePickerControllerDelegate
         
         profilePic.image = scaledImage
         
+        self.imageUploaded = true
+        
         dismiss(animated: true, completion: nil)
         
     }
@@ -72,9 +75,12 @@ class UserPhotoViewController: UIViewController, UIImagePickerControllerDelegate
         user["phoneNumber"] = self.phone
         user["address"] = self.userAddress
         
-        let image = profilePic.image!.pngData()
-        let file = PFFileObject(name: "image.png", data: image!)
-        user["profileImage"] = file
+        if (imageUploaded){
+            let image = profilePic.image!.pngData()
+            let file = PFFileObject(name: "image.png", data: image!)
+            user["profileImage"] = file
+        }
+        
 
 //        var userDOB: String?
         

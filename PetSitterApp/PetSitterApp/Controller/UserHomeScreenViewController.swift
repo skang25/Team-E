@@ -18,6 +18,7 @@ class UserHomeScreenViewController: UIViewController, UITableViewDelegate, UITab
     var animalTypes = "Dogs, Cats"
     var rate = ""
     var starRate = 5
+    var sitterObject = PFObject(className: "User")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +103,7 @@ class UserHomeScreenViewController: UIViewController, UITableViewDelegate, UITab
         destVC.animals = self.animalTypes
         destVC.rateString = self.rate
         destVC.starRating = self.starRate
+        destVC.sitter = self.sitterObject
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -110,6 +112,7 @@ class UserHomeScreenViewController: UIViewController, UITableViewDelegate, UITab
         self.name = "\(sitter["firstName"]!) \(sitter["lastName"]!)"
         self.rate = "$\(sitter["rate"]!)/hr"
         self.starRate = sitter["starRating"] as! Int
+        self.sitterObject = self.petSitters[indexPath.row]
         //self.animalTypes
         self.performSegue(withIdentifier: "sitterDetails", sender: nil)
     }
