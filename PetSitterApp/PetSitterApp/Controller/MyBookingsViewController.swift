@@ -23,6 +23,10 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadAppointments()
+    }
+    
     @objc func loadAppointments() {
         let query = PFQuery(className:"Appointment")
         query.includeKeys(["owner", "sitter", "start", "end"])

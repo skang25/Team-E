@@ -30,32 +30,6 @@ class ViewUserInfoViewController: UIViewController, UICollectionViewDelegate, UI
         
         petCollectionView.reloadData()
         
-        // Do any additional setup after loading the view.
-        /*
-        let query = PFQuery(className: "_User")
-        query.getObjectInBackground(withId: "Pwbe4GaXds") { (object, error) -> Void in
-            if object != nil && error == nil {
-                //Successfully retrieved
-                    print(object!["lastname"] as! String)
-            }
-            else{
-                // Some error happened
-            }
-        }*/
-        
-//        let query = PFQuery(className: "_User")
-//        query.findObjectsInBackground { [self] (objects, error) -> Void in
-//            if error == nil {
-//                if let returnedobjects = objects {
-//                    for object in returnedobjects {
-//                        if((object["firstName"] as! String) == "Sam"){
-//                            Firstname.text = "Sam"
-//                        }
-//                    }
-//                }
-//            }
-//        }
-        
         let user = PFUser.current()
         let fName = user!["firstName"] as! String
         let lName = user!["lastName"] as! String
@@ -79,16 +53,6 @@ class ViewUserInfoViewController: UIViewController, UICollectionViewDelegate, UI
         
         return cell
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

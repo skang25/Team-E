@@ -759,10 +759,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="animalTypes" destination="I9g-u7-CFs" id="Eh7-GP-qGQ"/>
+                        <outlet property="endDate" destination="LWn-Ew-SHY" id="eLu-Wh-18W"/>
                         <outlet property="rate" destination="PJl-V4-zTS" id="AhB-38-jIg"/>
                         <outlet property="sitterName" destination="ye2-cD-5fH" id="gJn-S6-rVJ"/>
                         <outlet property="sitterPhoto" destination="DGU-pO-mA5" id="e8z-9F-c3Q"/>
                         <outlet property="starImage" destination="S9W-ZR-Cz5" id="DBY-Ec-Fg9"/>
+                        <outlet property="startDate" destination="IaN-o7-sRN" id="PgD-2b-Zf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EcM-x5-tqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -781,8 +783,8 @@
                                 <rect key="frame" x="107" y="104" width="200" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alexis Edwards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-48-yi3">
-                                <rect key="frame" x="110" y="352" width="195" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alexis Edwards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-48-yi3">
+                                <rect key="frame" x="20" y="352" width="374" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -899,7 +901,7 @@
         <!--My Bookings-->
         <scene sceneID="fb0-Pl-obn">
             <objects>
-                <viewController id="apk-FX-fcB" customClass="MyBookingsViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="apk-FX-fcB" customClass="MyBookingsViewController" customModule="PetSitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="saY-Zq-Y0i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

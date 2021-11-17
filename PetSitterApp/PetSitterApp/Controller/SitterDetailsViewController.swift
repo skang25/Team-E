@@ -16,6 +16,8 @@ class SitterDetailsViewController: UIViewController {
     @IBOutlet weak var animalTypes: UILabel!
     @IBOutlet weak var rate: UILabel!
     @IBOutlet weak var starImage: UIImageView!
+    @IBOutlet weak var startDate: UIDatePicker!
+    @IBOutlet weak var endDate: UIDatePicker!
     var photoURL = URL(string: "www.google.com")!
     var name = ""
     var animals = ""
@@ -60,8 +62,8 @@ class SitterDetailsViewController: UIViewController {
         
         appointment["owner"] = PFUser.current()
         appointment["sitter"] = self.sitter
-        appointment["start"] = NSDate()
-        appointment["end"] = NSDate()
+        appointment["start"] = startDate.date as NSDate
+        appointment["end"] = endDate.date as NSDate
         
         appointment.saveInBackground {
           (success: Bool, error: Error?) in
