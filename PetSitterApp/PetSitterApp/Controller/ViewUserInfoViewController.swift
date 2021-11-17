@@ -14,7 +14,7 @@ class ViewUserInfoViewController: UIViewController, UICollectionViewDelegate, UI
 
     @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet weak var petCollectionView: UICollectionView!
-    @IBOutlet var Firstname: UILabel!
+    @IBOutlet var name: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,18 +43,24 @@ class ViewUserInfoViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }*/
         
-        let query = PFQuery(className: "_User")
-        query.findObjectsInBackground { [self] (objects, error) -> Void in
-            if error == nil {
-                if let returnedobjects = objects {
-                    for object in returnedobjects {
-                        if((object["firstName"] as! String) == "Sam"){
-                            Firstname.text = "Sam"
-                        }
-                    }
-                }
-            }
-        }
+//        let query = PFQuery(className: "_User")
+//        query.findObjectsInBackground { [self] (objects, error) -> Void in
+//            if error == nil {
+//                if let returnedobjects = objects {
+//                    for object in returnedobjects {
+//                        if((object["firstName"] as! String) == "Sam"){
+//                            Firstname.text = "Sam"
+//                        }
+//                    }
+//                }
+//            }
+//        }
+        
+        let user = PFUser.current()
+        let fName = user!["firstName"] as! String
+        let lName = user!["lastName"] as! String
+        name.text = fName + " " + lName
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

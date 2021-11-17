@@ -867,6 +867,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sj7-Q0-WVL"/>
                     <connections>
+                        <outlet property="name" destination="Tq8-48-yi3" id="7A5-8j-edf"/>
                         <outlet property="petCollectionView" destination="3dw-A2-gox" id="xWw-YL-dD6"/>
                         <outlet property="userPhoto" destination="gWm-Zl-14G" id="RuD-2f-cFc"/>
                     </connections>
