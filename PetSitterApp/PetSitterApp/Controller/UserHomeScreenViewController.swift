@@ -79,7 +79,10 @@ class UserHomeScreenViewController: UIViewController, UITableViewDelegate, UITab
         
         cell.sitterRate.text = "$\(sitter["rate"]!)/hr"
         
-        let rating = sitter["starRating"] as! Int
+        var rating = 4
+        if (sitter["starRating"] != nil) {
+            rating = sitter["starRating"] as! Int
+        }
         cell.starRating.image = UIImage(named: "\(rating)star")
         
         return cell

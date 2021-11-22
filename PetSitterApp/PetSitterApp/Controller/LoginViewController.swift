@@ -45,7 +45,15 @@ class LoginViewController: UIViewController {
                 self.alert(message: errorString!, title: "Error")
             }
             else {
-                self.performSegue(withIdentifier: "login", sender: nil)
+                let user = PFUser.current()
+                
+                if (user!["userType"] as! String == "owner") {
+                    self.performSegue(withIdentifier: "loginUser", sender: nil)
+                } else {
+                    self.performSegue(withIdentifier: "loginSitter", sender: nil)
+                }
+                
+                //self.performSegue(withIdentifier: "login", sender: nil)
                 //self.alert(message: "Welcome back!", title: "Login")
             }
         })

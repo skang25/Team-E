@@ -1,20 +1,14 @@
 //
-//  BookingCell.swift
+//  ScheduleCell.swift
 //  PetSitterApp
 //
-//  Created by Alexis Edwards on 11/10/21.
+//  Created by Alexis Edwards on 11/22/21.
 //
 
 import UIKit
 
-class BookingCell: UITableViewCell {
-    
-    
-    @IBOutlet weak var userPhoto: UIImageView!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var startDate: UILabel!
-    @IBOutlet weak var petNames: UILabel!
-    
+class ScheduleCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -58,14 +58,14 @@ class SitterDetailsViewController: UIViewController {
     
     @IBAction func onBook(_ sender: Any) {
         
-        var appointment = PFObject(className:"Appointment")
+        var request = PFObject(className:"Request")
         
-        appointment["owner"] = PFUser.current()
-        appointment["sitter"] = self.sitter
-        appointment["start"] = startDate.date as NSDate
-        appointment["end"] = endDate.date as NSDate
+        request["owner"] = PFUser.current()
+        request["sitter"] = self.sitter
+        request["start"] = startDate.date as NSDate
+        request["end"] = endDate.date as NSDate
         
-        appointment.saveInBackground {
+        request.saveInBackground {
           (success: Bool, error: Error?) in
           if (success) {
             self.alert(message: "Your booking has been confirmed." as NSString, title: "Success")
