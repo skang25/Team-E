@@ -106,4 +106,10 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
         return 120
     }
 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueIdentifier", sender: nil)
+    }
+    
+    
 }
