@@ -30,6 +30,7 @@
 		5EBFA332274BE6320081E60A /* ReservationRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFA331274BE6320081E60A /* ReservationRequestsViewController.swift */; };
 		5EBFA335274BEB570081E60A /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFA334274BEB570081E60A /* ScheduleCell.swift */; };
 		5EBFA338274BEB6D0081E60A /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBFA337274BEB6D0081E60A /* RequestCell.swift */; };
+		5EFC00212755709700DA87DA /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC00202755709700DA87DA /* AddPetViewController.swift */; };
 		7594AFCAAB4CB4E746663F5B /* Pods_PetSitterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108D78A76DD32F1B38B62B91 /* Pods_PetSitterApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		5EBFA331274BE6320081E60A /* ReservationRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationRequestsViewController.swift; sourceTree = "<group>"; };
 		5EBFA334274BEB570081E60A /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		5EBFA337274BEB6D0081E60A /* RequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
+		5EFC00202755709700DA87DA /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
 		64C81C57E7A70257E8D1C2AD /* Pods-PetSitterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetSitterApp.debug.xcconfig"; path = "Target Support Files/Pods-PetSitterApp/Pods-PetSitterApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				5E2E69E5273C3DBA0060D395 /* MyBookingsViewController.swift */,
 				5EBFA32E274BE61F0081E60A /* MyScheduleViewController.swift */,
 				5EBFA331274BE6320081E60A /* ReservationRequestsViewController.swift */,
+				5EFC00202755709700DA87DA /* AddPetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				5EBFA32F274BE61F0081E60A /* MyScheduleViewController.swift in Sources */,
 				5E277DFD2715E3F700AADE61 /* LoginViewController.swift in Sources */,
 				5E277E102715EB0600AADE61 /* UserInfoViewController.swift in Sources */,
+				5EFC00212755709700DA87DA /* AddPetViewController.swift in Sources */,
 				5E40A3C62703E8A0001B94AC /* AppDelegate.swift in Sources */,
 				5E40A3C82703E8A0001B94AC /* SceneDelegate.swift in Sources */,
 				5E277E132715EB1100AADE61 /* UserRegisterViewController.swift in Sources */,
