@@ -43,6 +43,7 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
         query.findObjectsInBackground { (appts, error) in
             if appts != nil {
                 self.appointments = appts!
+                print(appts!)
                 self.tableView.reloadData()
             }
             else {
@@ -111,5 +112,13 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
         self.performSegue(withIdentifier: "segueIdentifier", sender: nil)
     }
     
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOut()
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = main.instantiateViewController(withIdentifier: "LoginViewController")
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+        delegate.window?.rootViewController = loginVC
+    }
     
 }

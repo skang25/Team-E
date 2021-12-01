@@ -1219,7 +1219,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Bookings" id="zQx-sf-PpX"/>
+                    <navigationItem key="navigationItem" title="My Bookings" id="zQx-sf-PpX">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="2uE-DB-4cq">
+                            <connections>
+                                <action selector="onLogout:" destination="apk-FX-fcB" id="aUd-va-p7G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="saY-Zq-Y0i" id="TXV-0O-oPx"/>
                     </connections>
